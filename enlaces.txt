@@ -1,0 +1,8 @@
+- La documentació de la API a consumir és la següent:
+https://icanhazdadjoke.com/api
+
+- Cida per a obtenir un acudit:
+https://icanhazdadjoke.com/
+
+-   Header per a obtenir les dades en el format que ens interessa:
+'Accept': 'application/json'

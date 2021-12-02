@@ -1,17 +1,27 @@
-var num1 = 1;
-function varDeclaration() {
-    var num2 = 2;
-    if (num2 > num1) {
-        var num3 = 3;
-        num3++;
-    }
-    while (num1 < num2) {
-        var num4 = 4;
-        num1++;
-    }
-    console.log(num1); //2
-    console.log(num2); //2 
-    console.log(num3); //4
-    console.log(num4); //4
+const button = document.querySelector('.container button');
+const bromaText = document.querySelector('.container p')
+document.addEventListener('DOMContentLoaded', getBroma)
+button.addEventListener('click', getBroma);
+
+async function getBroma(){
+    const bromaData = await fetch('https://icanhazdadjoke.com/',{
+        headers:{
+            'Accept': 'application/json'
+        }
+    })
+    
+    const bromaObj = await bromaData.json();
+    bromaText.innerHTML=bromaObj;
+    console.log(bromaData)
+
 }
-varDeclaration();
+/*
+function getBroma(){
+    fetch('https://icanhazdadjoke.com/',{
+        headers:{
+            'Accept': 'application/json'
+        }
+    })
+    
+    .then(data=> data.json())
+    .then(obj => bromaText.innerHTML=obj)}*/

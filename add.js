@@ -1,22 +1,27 @@
+// @ts-check
+
 const button = document.querySelector('.container button');
 const bromaText = document.querySelector('.container p')
-document.addEventListener('DOMContentLoaded', getBroma)
-otraBroma.addEventListener('click', getBroma);
-/*
-async function getBroma(){
-    const bromaData = await fetch('https://icanhazdadjoke.com/',{
-        headers:{
+
+async function getBroma() {
+
+    document.getElementById("button1").hidden = false;
+    document.getElementById("button2").hidden = false;
+    document.getElementById("button3").hidden = false;
+
+    const bromaData = await fetch('https://icanhazdadjoke.com/', {
+        headers: {
             'Accept': 'application/json'
         }
     })
-    
+
     const bromaObj = await bromaData.json();
-    bromaText.innerHTML=bromaObj.joke;
+    bromaText.innerHTML = bromaObj.joke;
     console.log(bromaData)
 
-}*/
+}
 
-
+/*
 function getBroma() {
     fetch('https://icanhazdadjoke.com/', {
         headers: {
@@ -27,20 +32,20 @@ function getBroma() {
     .then(data => data.json())
         .then(obj => bromaText.innerHTML = obj.joke)
 }
-
+*/
 var today = new Date;
 
-var reportAcudits = [{
-    joke: String,
-    score: Number,
-    date: today.toISOString()
-}]
+var reportAcudits = []
 
 
-function addToList(i) {
+function addToList(score) {
 
-    reportAcudits.joke = bromaText.innerText;
-    reportAcudits.score = i;
-    reportAcudits.date = today
+    var reportAcudit = {}
+    reportAcudit.joke = bromaText.innerHTML;
+    reportAcudit.score = score;
+    reportAcudit.date = new Date().toISOString()
+
+    reportAcudits.push(reportAcudit)
+
+    console.log(reportAcudits)
 }
-console.log(reportAcudits)

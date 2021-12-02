@@ -1,24 +1,30 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap');
-*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 html{
-    font-size: 10px;
- /*   font-family: 'Gwendolyn', cursive;*/}
+    font-size: 12px;
+    font-family: 'M PLUS 1 Code', sans-serif
+}
 body{
-    background-color: black;
-    color: white
+    /*background-color: black;*/
+    background-image: url("img/people.png");
+    color: black
+}
+ div{
+    padding: 3rem;
 }
 section{
-    min-height: 100%;/**vh*/
+    min-height: 50vh;
     width: 100%;
     padding: 150px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white
 }
 .container{
     width: 90%;
@@ -30,21 +36,35 @@ section{
     display: flex;
     flex-direction: column;
 }
-.container p{
+.container div{
     font-size: 2rem;
+    font-weight: 300;
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.container p{
+    font-size: 20px;
     font-weight: 300;
     line-height: 3rem;
     text-align: justify;
 }
 button{
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: fit-content;
     padding: 2rem;
-    font-size: 2rem;
+    font-size: 17px;
     background-color: rgb(53, 38, 38);
     color: white;
     border:none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     align-self: center;
+    font-family: 'M PLUS 1 Code', sans-serif
+
 }
+div button{
+    border-radius: 5px;
+    color: red;
+}
+

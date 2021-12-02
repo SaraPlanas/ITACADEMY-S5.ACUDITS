@@ -1,70 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 12px;
     font-family: 'M PLUS 1 Code', sans-serif
 }
-body{
-    /*background-color: black;*/
-    background-image: url("img/people.png");
-    color: black
+
+body {
+    background-image: url("img/sunset-4475641_960_720.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: white;
 }
- div{
-    padding: 3rem;
+
+div {
+    padding: 2rem;
 }
-section{
+
+section {
     min-height: 50vh;
     width: 100%;
-    padding: 150px 0;
+    padding: 100px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white
 }
-.container{
-    width: 90%;
-    max-width: 500px;
+
+.container {
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: darkslategray;
-    border-radius: 10px;
-    padding: 3rem;
+    background-color: transparent;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
+    border: solid;
+    border-radius: 20px;
 }
-.container div{
+
+.container div {
     font-size: 2rem;
     font-weight: 300;
     line-height: 3rem;
     text-align: center;
-    margin-bottom: 3rem;
 }
-.container p{
+
+.container p {
     font-size: 20px;
     font-weight: 300;
     line-height: 3rem;
     text-align: justify;
 }
-button{
-    margin-top: 2rem;
-    width: fit-content;
-    padding: 2rem;
-    font-size: 17px;
-    background-color: rgb(53, 38, 38);
-    color: white;
-    border:none;
+
+button {
+    border: none;
     border-radius: 5px;
+    padding: 20px;
+    font-size: 17px;
+    background-color: rgb(214, 111, 26);
+    color: white;
     cursor: pointer;
     align-self: center;
     font-family: 'M PLUS 1 Code', sans-serif
-
-}
-div button{
-    border-radius: 5px;
-    color: red;
 }
 
+div div button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(133, 97, 49);
+    align-self: center;
+    text-align: center;
+    line-height: 0;
+    cursor: pointer;
+}

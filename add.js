@@ -2,7 +2,7 @@ const button = document.querySelector('.container button');
 const bromaText = document.querySelector('.container p')
 document.addEventListener('DOMContentLoaded', getBroma)
 button.addEventListener('click', getBroma);
-
+/*
 async function getBroma(){
     const bromaData = await fetch('https://icanhazdadjoke.com/',{
         headers:{
@@ -11,11 +11,11 @@ async function getBroma(){
     })
     
     const bromaObj = await bromaData.json();
-    bromaText.innerHTML=bromaObj;
+    bromaText.innerHTML=bromaObj.joke;
     console.log(bromaData)
 
-}
-/*
+}*/
+
 function getBroma(){
     fetch('https://icanhazdadjoke.com/',{
         headers:{
@@ -24,4 +24,4 @@ function getBroma(){
     })
     
     .then(data=> data.json())
-    .then(obj => bromaText.innerHTML=obj)}*/
+    .then(obj => bromaText.innerHTML=obj.joke)}

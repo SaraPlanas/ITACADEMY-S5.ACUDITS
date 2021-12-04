@@ -2,6 +2,7 @@
 
 const button = document.querySelector('.container button');
 const bromaText = document.querySelector('.container p')
+const tempsText = document.querySelector('.temps p')
 
 async function getBroma() {
 
@@ -17,10 +18,21 @@ async function getBroma() {
 
     const bromaObj = await bromaData.json();
     bromaText.innerHTML = bromaObj.joke;
-    console.log(bromaData)
 
 }
 
+async function getTiempo() {
+
+    const tempsData = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Barcelona&appid=10f9b5b8eb548e0af3a7418fb76a0d4d&lang=ca', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+
+    const tempsObj = await tempsData.json();
+    const temp = tempsObj['weather'].map(weather => weather.description);
+    tempsText.innerHTML = temp;
+}
 /*
 function getBroma() {
     fetch('https://icanhazdadjoke.com/', {

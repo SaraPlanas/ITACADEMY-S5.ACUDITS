@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="getTiempo();">
     <div class="temps">Avui:
-        <p></p>
+        <p>
+        </p>
     </div>
     <section>
 
@@ -26,9 +27,10 @@
                     <button type="button " onclick="addToList(3) " id="button3" hidden>3</button>
                 </div>
             </div>
-            <button id="otraBroma " onclick="getBroma(); getTiempo() ">Següent acudit</button>
+            <button id="otraBroma " onclick="getBroma() ">Següent acudit</button>
         </div>
     </section>
+
     <script src="./add.js "></script>
 </body>
 

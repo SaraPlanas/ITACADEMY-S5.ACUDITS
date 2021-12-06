@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acudits</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="getTiempo();">
-    <div class="temps">Avui:
+<body id="cuerpo" onload=" getTiempo(), image();">
+    <div class="temps">
         <p>
         </p>
+        <h4>
+        </h4>
     </div>
     <section>
 
-        <div class=" container ">
+        <div class="container">
 
             <div>Preparat per a riure? &#128514;</div>
-            <div class="broma ">
+            <div class="broma">
                 <p>
                 </p>
                 <div class="scoreButton ">
-                    <button type="button " onclick="addToList(1) " id="button1" hidden>1</button>
-                    <button type="button " onclick="addToList(2) " id="button2" hidden>2</button>
-                    <button type="button " onclick="addToList(3) " id="button3" hidden>3</button>
+                    <button type="button " onclick="addToList(1) " id="button1" hidden><i class="fa fa-frown-o fa-2x" aria-hidden="true"></i></button>
+                    <button type="button " onclick="addToList(2) " id="button2" hidden><i class="fa fa-meh-o fa-2x" aria-hidden="true"></i></button>
+                    <button type="button " onclick="addToList(3) " id="button3" hidden><i class="fa fa-smile-o fa-2x" aria-hidden="true"></i></button>
                 </div>
             </div>
-            <button id="otraBroma " onclick="getBroma() ">Següent acudit</button>
+            <button id="otraBroma " onclick="randomAcudits(), image() ">Següent acudit</button>
         </div>
     </section>
 

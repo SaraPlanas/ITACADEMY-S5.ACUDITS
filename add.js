@@ -9,7 +9,7 @@ function image() {
 
     let imagenAleatoria = images[Math.floor(Math.random() * images.length)]
 
-    document.body.style.backgroundImage = ("url(/img/" + (imagenAleatoria) + ")");
+    document.body.style.backgroundImage = ("url(img/" + (imagenAleatoria) + ")");
 }
 
 var today = new Date;
